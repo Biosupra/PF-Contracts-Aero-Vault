@@ -1,0 +1,19 @@
+{
+  "name": "pf-contracts-aero-vault",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Panda Financial: parameter-upgradeable Aerodrome CL vault platform governed by a multisig behind a timelock, with the PANDA token and staking",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "fork:rehearse": "hardhat run scripts/rehearse-aero-fork.js",
+    "deploy": "hardhat run scripts/deploy-aero-vault.js --network base"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.6.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.29.0"
+  }
+}

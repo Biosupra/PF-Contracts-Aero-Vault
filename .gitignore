@@ -1,0 +1,12 @@
+node_modules/
+artifacts/
+cache/
+.env
+deployments/*.local.json
+*.log
+
+# Basescan verification inputs (constructor args, libraries), made from the creation transactions
+.verify/
+
+# a local fork rehearsal's record (scripts/rehearse-v3-fork.js on --network localhost)
+deployments/localhost.json

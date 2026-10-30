@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "chainId": "8453",
+  "createdAt": 1792630122399,
+  "meta": {
+    "name": "Panda Aero vault: CANCEL (rollback only)",
+    "description": "Timelock cancel(0xbed6a74d94e11f18a1f281a79bbb0b3faee551462aae0f7a20c0b2cb23ddea2c): only to call off the scheduled batch before it executes",
+    "txBuilderVersion": "1.16.5",
+    "createdFromSafeAddress": "0x9eb619B3aB33192080FfA846820117e2f00EE9bA",
+    "createdFromOwnerAddress": ""
+  },
+  "transactions": [
+    {
+      "to": "0xe9A0A268aC8227659D0479472f5DC966C12f023a",
+      "value": "0",
+      "data": "0xc4d252f5bed6a74d94e11f18a1f281a79bbb0b3faee551462aae0f7a20c0b2cb23ddea2c",
+      "contractMethod": null,
+      "contractInputsValues": null
+    }
+  ]
+}

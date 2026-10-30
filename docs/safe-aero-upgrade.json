@@ -1,0 +1,64 @@
+{
+  "version": "1.0",
+  "chainId": "8453",
+  "createdAt": 0,
+  "meta": {
+    "name": "Old AERO -> new AERO (Aero upgrade, 1:1)",
+    "description": "Two calls, same amount: approve AerodromeMigration 0x22a2F7340a3fB4C7C389D91eE954766B12476721 on old AERO 0x940181a94A35A4569E4529A3CDfB74e38FD98631, then depositLiquid(amount, Safe). Amount = the Safe's whole old AERO balance in wei. Opens 2026-10-22 00:00 UTC (reverts MigrationNotOpen before).",
+    "txBuilderVersion": "1.16.5",
+    "createdFromSafeAddress": "0x9eb619B3aB33192080FfA846820117e2f00EE9bA",
+    "createdFromOwnerAddress": ""
+  },
+  "transactions": [
+    {
+      "to": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+      "value": "0",
+      "data": null,
+      "contractMethod": {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "approve",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "spender": "0x22a2F7340a3fB4C7C389D91eE954766B12476721",
+        "amount": "<OLD AERO BALANCE OF THE SAFE, IN WEI (18 decimals)>"
+      }
+    },
+    {
+      "to": "0x22a2F7340a3fB4C7C389D91eE954766B12476721",
+      "value": "0",
+      "data": null,
+      "contractMethod": {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "_recipient",
+            "type": "address"
+          }
+        ],
+        "name": "depositLiquid",
+        "payable": true
+      },
+      "contractInputsValues": {
+        "_amount": "<OLD AERO BALANCE OF THE SAFE, IN WEI (18 decimals)>",
+        "_recipient": "0x9eb619B3aB33192080FfA846820117e2f00EE9bA"
+      }
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "network": "base",
+  "deployer": "0x3e1fe6c4E81B9F59912B0b9074E71dd2F1A61919",
+  "safe": "0x9eb619B3aB33192080FfA846820117e2f00EE9bA",
+  "emergencyAdmin": "0x9eb619B3aB33192080FfA846820117e2f00EE9bA",
+  "timelockDelay": 172800,
+  "timelock": "0xe9A0A268aC8227659D0479472f5DC966C12f023a",
+  "registry": "0x52643dCDdd95944b01f10A4949d2923a0ff69FCC",
+  "feePolicy": "0x678b772A735C9611682FaA92C916c0d48e0621CF",
+  "vaultLib": "0x64094153745b94363f12e7a0ecd7da2FCF284E25",
+  "topUpLib": "0x2Fd5a130FD751a7661194ce2Bc6C05BAb09794DD",
+  "vaults": [
+    {
+      "key": "weth-usdc",
+      "address": "0x61986AFae9B07314d855E7C54949E30A866c93a8",
+      "deployBlock": 52155579,
+      "pool": "0x3FE04A59Ebd38cF06080a6F60a98D124eb59392A",
+      "gauge": "0xA0B61fdB9f1FB9b917Fe38b49427Fd4D87472D28",
+      "keeper": "0x5fb0abf6CC6D0Aa7ee1F3311b2e76D014eD3af60",
+      "tokenA": "0x4200000000000000000000000000000000000006",
+      "tokenB": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "route": {
+        "tokens": [
+          "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+          "0x4200000000000000000000000000000000000006"
+        ],
+        "spacings": [
+          200
+        ]
+      },
+      "routePools": [
+        "0x4e506648d493C8870f55e870480f92f2F33ecE51"
+      ]
+    }
+  ],
+  "keeper": "0x5fb0abf6CC6D0Aa7ee1F3311b2e76D014eD3af60",
+  "treasury": "0x9eb619B3aB33192080FfA846820117e2f00EE9bA",
+  "company": "0x090646B5da23d102d08fAe6166F37678b135A221",
+  "safetyModule": "0x3e1fe6c4E81B9F59912B0b9074E71dd2F1A61919",
+  "guardRails": {
+    "maxRebalanceSlippageBps": 100,
+    "twapWindow": 300,
+    "minRebalanceInterval": 3600,
+    "maxRangeSpacings": 40,
+    "maxTwapDeviationTicks": 100
+  },
+  "fees": {
+    "keeperRewardBps": 100,
+    "basePandaBps": [
+      1900,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stages": [
+      {
+        "minVaultUsd": 0,
+        "companyWeight": 15,
+        "treasuryWeight": 4
+      },
+      {
+        "minVaultUsd": 50000,
+        "companyWeight": 11,
+        "treasuryWeight": 8
+      },
+      {
+        "minVaultUsd": 500000,
+        "companyWeight": 8,
+        "treasuryWeight": 11
+      }
+    ],
+    "activeStage": 0
+  },
+  "aerodrome": {
+    "NFPM": "0xe1f8cd9AC4e4A65F54f38a5CdAfCA44f6dD68b53",
+    "ROUTER": "0x698Cb2b6dd822994581fEa6eA4Fc755d1363A92F",
+    "FACTORY": "0xf8f2eB4940CFE7d13603DDDD87f123820Fc061Ef",
+    "VOTER": "0x16613524e02ad97eDfeF371bC883F2F5d6C480A5"
+  },
+  "referrals": "0x9010e03A5F353E769509f3BA9DeE174b97a77Bb5",
+  "tvlReader": "0xc658B4b01A01b34591c9BaF6910a243982dDd53c",
+  "feePolicyV3": "0xB5A0728084fa97a2407FDabC94f64755a52BB291",
+  "feePolicyV3Config": {
+    "registry": "0x52643dCDdd95944b01f10A4949d2923a0ff69FCC",
+    "initialOwner": "0xe9A0A268aC8227659D0479472f5DC966C12f023a",
+    "keeperRewardBps": 100,
+    "basePandaBps": [
+      1900,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "company": "0x090646B5da23d102d08fAe6166F37678b135A221",
+    "stages": [
+      {
+        "minVaultUsd": 0,
+        "companyWeight": 17,
+        "treasuryWeight": 2,
+        "stakerShareBps": 1000
+      },
+      {
+        "minVaultUsd": 25000,
+        "companyWeight": 16,
+        "treasuryWeight": 3,
+        "stakerShareBps": 1000
+      },
+      {
+        "minVaultUsd": 50000,
+        "companyWeight": 15,
+        "treasuryWeight": 4,
+        "stakerShareBps": 1000
+      },
+      {
+        "minVaultUsd": 100000,
+        "companyWeight": 13,
+        "treasuryWeight": 6,
+        "stakerShareBps": 1000
+      },
+      {
+        "minVaultUsd": 250000,
+        "companyWeight": 11,
+        "treasuryWeight": 8,
+        "stakerShareBps": 1500
+      },
+      {
+        "minVaultUsd": 500000,
+        "companyWeight": 10,
+        "treasuryWeight": 9,
+        "stakerShareBps": 1500
+      },
+      {
+        "minVaultUsd": 1000000,
+        "companyWeight": 9,
+        "treasuryWeight": 10,
+        "stakerShareBps": 2000
+      },
+      {
+        "minVaultUsd": 2500000,
+        "companyWeight": 8,
+        "treasuryWeight": 11,
+        "stakerShareBps": 2000
+      }
+    ],
+    "activeStage": 0,
+    "stakerRewards": "0x0000000000000000000000000000000000000000",
+    "referrals": "0x9010e03A5F353E769509f3BA9DeE174b97a77Bb5",
+    "referralShareBps": 100,
+    "stageSource": "0xc658B4b01A01b34591c9BaF6910a243982dDd53c",
+    "minTreasuryBps": 50,
+    "specialPandaBps": 1400
+  },
+  "tvlReaderThresholds": {
+    "lineAt": [
+      "0",
+      "25000",
+      "50000",
+      "100000",
+      "250000",
+      "500000",
+      "1000000",
+      "2500000"
+    ],
+    "enterAt": [
+      "0",
+      "26563",
+      "53334",
+      "115385",
+      "295455",
+      "550000",
+      "1111112",
+      "2812500"
+    ]
+  },
+  "feePolicyV3DeployedAt": "2026-10-12T00:16:50.327Z",
+  "feePolicyV3SwitchedAt": "2026-10-15T05:50Z (Safe nonce 6, tx 0xc50c6fcd30006264ec6ae498494546735b4ea0577d509ab8a5c0f2c960c490a6; registry.feePolicy = feePolicyV3; v2 kept at feePolicy as the rollback target)",
+  "registryFeePolicyActive": "feePolicyV3",
+  "aeroVault": {
+    "key": "weth-usdc-aero",
+    "address": "0x9Af169BA394867c850F73B1262f370CD2107CC79",
+    "deployBlock": 52920384,
+    "vaultLib": "0x8Dce1c0a6836F5E1E341bA548af5626199b54f3a",
+    "topUpLib": "0xa96EF3a52C1AbdadBA036D91eF3A2cC59957Ff49",
+    "pool": "0x4A7af46bC8aBc00048c6c7920a1488DAF568366c",
+    "gauge": "0x46a9dCa72D78366571bE583aa69C1DC16E6889fB",
+    "keeper": "0xf8A811eCd1058AfEF4e4a44a753c774557b2479E",
+    "tokenA": "0x4200000000000000000000000000000000000006",
+    "tokenB": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "aero": "0x3f5bF3EdAc59d650D8fDf9657a71F2f904A3a4Ee",
+    "tickSpacing": 50,
+    "route": {
+      "tokens": [
+        "0x3f5bF3EdAc59d650D8fDf9657a71F2f904A3a4Ee",
+        "0x4200000000000000000000000000000000000006"
+      ],
+      "spacings": [
+        200
+      ]
+    },
+    "routePools": [
+      "0xc85D5CB72d1aaD6f152A8decAd228AE4A59Ac9B3"
+    ],
+    "guardRails": {
+      "maxRebalanceSlippageBps": 300,
+      "twapWindow": 300,
+      "minRebalanceInterval": 3600,
+      "maxRangeSpacings": 40,
+      "maxTwapDeviationTicks": 100
+    },
+    "batchSalt": "0xa778c5954893d5df12956a5412d83b466584322c19e341e4cbcfdc464f0df265",
+    "aeroAddresses": {
+      "clFactory": "0x9CB220581b91b0C83223012FE69688b92aD07a76",
+      "gaugeFactory": "0xf437f62053ACB121665b8fDBfeA8F214FB8E589d",
+      "wethUsdcPool": "0x4A7af46bC8aBc00048c6c7920a1488DAF568366c",
+      "wethUsdcGauge": "0x46a9dCa72D78366571bE583aa69C1DC16E6889fB",
+      "positionManager": "0x4857DB576eE0e45F10525eC59527BfD10beeC60b",
+      "swapRouter": "0x9Ee35Bf1bd69a03c6F0393582030fCe8Bb93D418",
+      "leafVoter": "0x382409fad8503FbCdbB27A4211551fa03e884078",
+      "aero": "0x3f5bF3EdAc59d650D8fDf9657a71F2f904A3a4Ee",
+      "aeroUsdcPool": "0xD0Acf293547457Fb4fE9eE32CA93e89497626816",
+      "aeroWethPool": "0xc85D5CB72d1aaD6f152A8decAd228AE4A59Ac9B3"
+    },
+    "deployedAt": "2026-10-22T00:48:36.165Z",
+    "registered": false
+  }
+}
